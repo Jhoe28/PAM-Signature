@@ -72,6 +72,11 @@
 .more-image .row img:nth-child(2n+1){
    transform: translateY(50px);
 }
+@media(max-width:1350px){
+   .gallery img:nth-child(2n+1){
+      transform: none;
+   }
+}
 @media(max-width:1024px){
    .gallery img:nth-child(2n+1){
       transform: none;
