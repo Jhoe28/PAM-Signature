@@ -1,0 +1,86 @@
+:root{
+   --font-1: "Philosopher", serif;
+   --skin-color-1: #1a1a1a;
+   --skin-color-2: #243673;
+   --skin-color-3: #f70077;
+   --skin-color-4: #f7f7f7;
+   --skin-color-5: #fff;
+   --skin-color-6 :#3e4359;
+   --skin-color-7: #bfd1ff;
+   --skin-color-8: #e41349;
+   --skin-color-9: #0097a7;
+   --skin-color-10: #1abc9c;
+   --text-white: #f6f6f6;
+}
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'poppins', sans-serif;
+}
+.sectionFirst::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url("contact.jpg");
+   background-position: center top;
+   background-size: cover;
+   background-repeat: no-repeat; 
+   z-index: -1;
+   opacity: .7;
+   border-bottom: 50%;
+}
+.gallery{
+   margin: 10rem 2%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+   justify-content: center;
+   gap: 2rem; 
+}
+.gallery img{
+   width: 100%;
+   height: 100%;
+   border-radius: .5rem;
+   transition: .8s ease-out;
+}
+.gallery img:hover{
+   transform: scale(1.1);
+}
+.gallery img:nth-child(2n+1){
+   transform: translateY(-50px);
+}
+.more-image .row{
+   margin: 0 2% 6rem;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+   justify-content: center;
+   gap: 1.5rem;
+}
+.more-image .row img{
+   width: 100%;
+   height: 100%;
+   border-radius: .5rem;
+   transition: .8s;
+}
+.more-image .row img:hover{
+   transform: scale(1.1);
+}
+.more-image .row img:nth-child(2n+1){
+   transform: translateY(50px);
+}
+@media(max-width:1024px){
+   .gallery img:nth-child(2n+1){
+      transform: none;
+   }
+   more-image .row{
+      grid-template-columns: repeat(auto-fit, 1fr);
+      margin-bottom: 3rem ;
+   }
+   .more-image .row img:nth-child(2n+1){
+      transform: none;
+   }
+}

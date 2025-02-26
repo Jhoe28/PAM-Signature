@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+   --font-1: "Philosopher", serif;
+   --skin-color-1: #1a1a1a;
+   --skin-color-2: #243673;
+   --skin-color-3: #f70077;
+   --skin-color-4: #f7f7f7;
+   --skin-color-5: #fff;
+   --skin-color-6 :#3e4359;
+   --skin-color-7: #bfd1ff;
+   --skin-color-8: #e41349;
+   --skin-color-9: #0097a7;
+   --skin-color-10: #1abc9c;
+   --text-white: #f6f6f6;
+}
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'poppins', sans-serif;
+}
+
+.sectionFirst{
+   position: relative;
+   padding: 10rem 0;
+   color: whitesmoke;
+   min-height: 30vh;
+   padding: 8rem 0 8rem;
+}
+.sectionFirst::after{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(rgba(20,20,20,2),rgba(20,20,20,2));
+   z-index: -1;
+   opacity: .7;
+   border-bottom: 50%;
+}
+.sectionFirst::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url("contact.jpg");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat; 
+   z-index: -1;
+   opacity: .7;
+   border-bottom: 50%;
+}
+.sectionFirst h2{
+   font-size: 5rem;
+   font-family: var(--font-1);
+   text-align: center;
+   animation: zoom 1.2s ease-out forwards;
+   animation-delay: 0.4s;
+}
+.services{
+   padding: 5rem 5%;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   animation: zoom 1.4s ease-out forwards;
+   animation-delay: 0.4s;
+}
+.services h2{
+   text-align: center;
+   font-weight: 400;
+   font-family: var(--font-1);
+   font-size: 2rem;
+   color: var(--skin-color-9);
+}
+.services .ser-text{
+   text-align: center;
+   margin-bottom: 2rem;
+   font-size: 16px;
+}
+.services .ser-box{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 2rem;
+   color: #fff;
+}
+.services .ser-box .box{
+   position: relative;
+   top: 0;
+   height: 60vh;
+   overflow: hidden;
+}
+.services .ser-box .box::after{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #000;
+   z-index: 1;
+   opacity: .2;
+   border-radius: 2%;
+   transition: all .4s ease;
+}
+.services .ser-box .box:hover::after{
+   width: 0;
+}
+.services .ser-box .box .img{
+   width: 100%;
+   height: 100%;
+   overflow-y: hidden;
+}
+.services .ser-box .box .img img{
+   width: 100%;
+   height: 100%;
+   border-radius: 1rem;
+   position: relative;
+   transition: .4s ease;
+}
+.services .ser-box .box .img img:hover{
+   transform: scale(1.1);
+}
+.services .ser-box .box .box-info{
+   position: absolute;
+   bottom: 5%;
+   left: 5%;
+   z-index: 2;
+}
+.services .ser-box .box .box-info .ser-name{
+   font-size: 1.5rem;
+   font-weight: 700;
+   font-family: var(--font-1);
+   padding-bottom: .8rem;
+}
+.services .ser-box .box .box-info p{
+   font-weight: 700;
+}
+@media(max-width:768px){
+   .services .ser-box{
+      grid-template-columns: repeat(2, 1fr);
+   }
+   .services .ser-box .box{
+      height: 50vh;
+   }
+}
+@media(max-width:610px){
+   .sectionFirst h2{
+      font-size: 3rem;
+   }
+}
+@media(max-width:435px){
+   .services .ser-box{
+      grid-template-columns: repeat(1, 1fr);
+   }
+   .services .ser-box .box{
+      height: 50vh;
+   }
+}
