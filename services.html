@@ -9,15 +9,7 @@
    <link rel="stylesheet" href="animation.css">
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="services.css">
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-   </script>
-   <script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "YUqhSTgo-K0q_wrV_",
-      });
-   })();
-   </script>
+   
 </head>
 <body>
    <header>
@@ -119,9 +111,10 @@
          <p class="para">Join our fashion community and be the first to discover exclusive designs, style tips, and behind-the-scenes insights from PAM Signature. Sign up for our newsletter to receive updates on new collections, special offers, and trend forecasts straight to your inbox.</p>
          <div class="bfText">Stay stylish and inspired - Subscribe now!</div>
          <div class="subscribe">
-            <form>
+            <form action="https://api.web3forms.com/submit" method="POST">
+               <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                <input type="email" name="Email" placeholder="Enter Email...">
-               <button class="btn">Subscribe</button>
+               <button class="btn" type="submit">Subscribe</button>
             </form>
          </div>
       </div>

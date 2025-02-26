@@ -10,17 +10,6 @@
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="about.css">
    <link rel="stylesheet" href="contact.css">
-   <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-   </script>
-   <script type="text/javascript">
-      (function(){
-         emailjs.init({
-           publicKey: "DrA4WrsPfwiybJmVu",
-         });
-      })();
-   </script>
-   </script>
 </head>
 <body>
    <header>
@@ -41,15 +30,16 @@
       <h2>Contact us</h2>
    </section>
    <section class="formMap">
-      <div class="form">
+      <div class="form" action="https://api.web3forms.com/submit" method="POST">
+         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
          <h3 class="form-heading">Get in touch</h3>
          <h5 class="para">Let's create something extraordinary together.Contact us via email, call, or fill out the form below.</h5>
          <form>
-            <input type="text" id="name" placeholder="Enter name..." required>
-            <input type="number" id="phone_no" placeholder="Phone no" required>
-            <input type="email" id="email" placeholder="Enter email..." required>            
-            <textarea rows="10" cols="30" id="message" placeholder="Enter message..." required></textarea>
-            <button type="submit" onclick="sendMail()">Send request</button>
+            <input type="text" name="name" placeholder="Enter name..." required>
+            <input type="number" name="phone_no" placeholder="Phone no" required>
+            <input type="email" name="email" placeholder="Enter email..." required>            
+            <textarea rows="10" cols="30" name="message" placeholder="Enter message..." required></textarea>
+            <button type="submit">Send request</button>
          </form>
       </div>
       <div class="map">
@@ -65,9 +55,10 @@
          <p class="para">Join our fashion community and be the first to discover exclusive designs, style tips, and behind-the-scenes insights from PAM Signature. Sign up for our newsletter to receive updates on new collections, special offers, and trend forecasts straight to your inbox.</p>
          <div class="bfText">Stay stylish and inspired - Subscribe now!</div>
          <div class="subscribe">
-            <form>
+            <form action="https://api.web3forms.com/submit" method="POST">
+               <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                <input type="email" name="Email" placeholder="Enter Email...">
-               <button class="btn">Subscribe</button>
+               <button class="btn" type="submit" onclick="redirect">Subscribe</button>
             </form>
          </div>
       </div>
