@@ -8,7 +8,3 @@ menuToggle.onclick = function () {
    menuToggle.classList.toggle('topIn');
    section.classList.toggle('active');
 }
-
-function redirect() {
-   window.location="index.html";
-}

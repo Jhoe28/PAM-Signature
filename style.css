@@ -81,11 +81,11 @@ header ul li{
    float: left;
    position: relative;
 }
-header ul li #navNum{
+#navNum{
    border: 2px solid var(--skin-color-9);
    padding: 20px 35px;
    border-radius: 5px;
-   margin-left: 9rem;
+   text-decoration: none;
    font-size: large;
    font-weight: 700;
    color: var(--skin-color-5);
@@ -93,7 +93,7 @@ header ul li #navNum{
    animation-delay: 0.6s;
    transition: .3s;
 }
-header ul li #navNum:hover{
+#navNum:hover{
    background: var(--skin-color-9);
 }
 header ul li a{
@@ -656,6 +656,9 @@ footer{
    }
    .sectionFirst .frontPage .para{
       font-size: 2rem;
+   }
+   #navNum{
+      display: none;
    }
    .menuToggle{
       position: relative;
